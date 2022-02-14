@@ -37,73 +37,31 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           component={'img'}
           src={
             mode === 'light' && !colorInvert
-              ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-              : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
+              ? '/logo-final.svg'
+              : '/logo-final.svg'
           }
           height={1}
           width={1}
         />
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <Box>
-          <NavItem
-            title={'Landings'}
-            id={'landing-pages'}
-            items={landingPages}
-            colorInvert={colorInvert}
-          />
+        <Box marginLeft={4}>
+          What we do
         </Box>
         <Box marginLeft={4}>
-          <NavItem
-            title={'Company'}
-            id={'company-pages'}
-            items={companyPages}
-            colorInvert={colorInvert}
-          />
+          Clients
         </Box>
         <Box marginLeft={4}>
-          <NavItem
-            title={'Account'}
-            id={'account-pages'}
-            items={accountPages}
-            colorInvert={colorInvert}
-          />
+          Work
         </Box>
         <Box marginLeft={4}>
-          <NavItem
-            title={'Pages'}
-            id={'secondary-pages'}
-            items={secondaryPages}
-            colorInvert={colorInvert}
-          />
+          About
         </Box>
         <Box marginLeft={4}>
-          <NavItem
-            title={'Blog'}
-            id={'blog-pages'}
-            items={blogPages}
-            colorInvert={colorInvert}
-          />
+          Products
         </Box>
         <Box marginLeft={4}>
-          <NavItem
-            title={'Portfolio'}
-            id={'portfolio-pages'}
-            items={portfolioPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <Button
-            variant="contained"
-            color="primary"
-            component="a"
-            target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
-            size="large"
-          >
-            Buy now
-          </Button>
+          Team
         </Box>
       </Box>
       <Box sx={{ display: { xs: 'block', md: 'none' } }} alignItems={'center'}>

@@ -1,27 +1,20 @@
 import React from 'react';
 import Divider from '@mui/material/Divider';
-import Box from '@mui/material/Box';
 import Main from '../../layouts/Main';
 import Container from '../../components/Container';
 import {
   Team,
   Features,
   Hero,
-  Partners,
   Process,
   Reviews,
   Work,
 } from './components';
 
 const Startup = () => {
-  return (
-    <Main colorInvert={true}>
+  return (<>
+     <Main colorInvert={true}>
       <Hero />
-      <Box bgcolor={'primary.main'}>
-        <Container paddingX={'0 !important'} maxWidth={1}>
-          <Partners />
-        </Container>
-      </Box>
       <Container>
         <Features />
       </Container>
@@ -39,7 +32,8 @@ const Startup = () => {
       <Container>
         <Team />
       </Container>
-    </Main>
+     </Main>
+    </>
   );
 };
 
