@@ -34,6 +34,8 @@ const Hero = () => {
   };
 
   const onSubmit = (values) => {
+    alert("from Hero Submit")
+    // axios.post().then(req,res)
     return values;
   };
 
@@ -141,6 +143,7 @@ const Hero = () => {
                       sx={{
                         height: 54,
                         marginRight: { xs: 0, md: 2 },
+                 
                         marginBottom: { xs: 4, md: 0 },
                       }}
                       variant="outlined"
