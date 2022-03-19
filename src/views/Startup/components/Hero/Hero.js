@@ -33,9 +33,23 @@ const Hero = () => {
     email: '',
   };
 
-  const onSubmit = (values) => {
+  const onSubmit = async(values) => {
     alert("from Hero Submit")
-    // axios.post().then(req,res)
+
+    console.log('from herooooooo', values)
+    
+    //after setting api, we should write below code
+    const response = await fetch('/api/contact',{
+      method:'POST',
+      body: JSON.stringify(values),
+      headers:{
+        'Content-type':'application/json'
+       }
+
+    })
+    const data = await response.json()
+    console.log("from comment submitvalue-----------",data)
+
     return values;
   };
 

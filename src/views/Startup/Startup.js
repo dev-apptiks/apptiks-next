@@ -3,7 +3,7 @@ import Divider from '@mui/material/Divider';
 import Main from '../../layouts/Main';
 import Container from '../../components/Container';
 import {
-  Team,
+   Team,
   Features,
   Hero,
   Process,
@@ -25,13 +25,13 @@ const Startup = () => {
         <Work />
       </Container>
       <Divider />
-      <Container>
+      {/* <Container>
         <Reviews />
-      </Container>
+      </Container> */}
       <Divider />
-      <Container>
+      {/* <Container>
         <Team />
-      </Container>
+      </Container> */}
      </Main>
     </>
   );

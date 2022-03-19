@@ -8,12 +8,16 @@ import { Button } from '@mui/material';
 
 export default function Contact() {
     const [name, setname] = useState('');
+    const[lastName,setlastName]= useState('');
+    const[age,setage]=useState('');
     const [email, setemail] = useState('');
+    const[password, setpassword]=useState('')
 
     const submitValue =async()=>{
        // alert('frm contact sub')
-       // console.log(name,email)
-        const contact = {name:name,email:email}
+       // console.log(name,email,password)
+        const contact = {name:name,email:email,password:password,age:age,lastname:lastName}
+        console.log(contact)
 
        const response = await fetch('/api/contact',{
             method:'POST',
@@ -46,6 +50,20 @@ export default function Contact() {
       <TextField id="standard-basic" label="Email" variant="standard"
       value={email}
       onChange={(e)=>setemail(e.target.value)} />
+
+      <TextField id="standard-basic" label="password" variant="standard"
+      value={password}
+      onChange={(e)=>setpassword(e.target.value)} />
+
+      <TextField id="standard-basic" label="LastName" variant="standard"
+      value={lastName}
+      onChange={(e)=>setlastName(e.target.value)} />
+
+      <TextField id="standard-basic" label="Age" variant="standard"
+      value={age}
+      onChange={(e)=>setage(e.target.value)} />
+
+
       <Button variant="contained" onClick={submitValue}>Submit</Button>
 
     </Box>

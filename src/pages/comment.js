@@ -6,13 +6,35 @@ import { useState } from 'react';
 
 export default function Comment() {
     const [comment, setcomment] = useState('');
+    const [feedback, setfeedback] = useState('')
 
     const submitValue = async()=>{
-        //alert("from submitValue")
+        //alert("from  ")
         console.log('comment is',comment);
-       const response = await fetch('/api/comment',{
+        console.log('feedback is',feedback);
+
+        let payload ={comment:comment,feedback:feedback}
+
+        // let input ={in:payload}
+
+        // let obj ={data:input}
+
+        // {data:{
+        //   in:{
+        //     comment:'aaa',
+        //     feedback:'bbb'
+        //   }
+        // }}
+        
+
+      
+       // console.log(obj)
+      //  {data:{comment:'abc',feedback:'xyz'}};
+        
+       
+        const response = await fetch('/api/comment',{
            method: "POST",
-           body: JSON.stringify({abc:comment}),
+           body: JSON.stringify(payload),
            headers:{
                'Content-type':'application/json'
            }
@@ -31,12 +53,17 @@ export default function Comment() {
       noValidate
       autoComplete="off"
     >
-      <TextField id="outlined-basic" label="Outlined" variant="outlined"
+      <TextField id="outlined-basic" label="Comment" variant="outlined"
        value={comment} 
        onChange={(e)=> setcomment(e.target.value)}
 
       />
-      <Button variant="contained" onClick={submitValue}>Contained</Button>
+       <TextField id="outlined-basic" label="Feedback" variant="outlined"
+       value={feedback} 
+       onChange={(e)=> setfeedback(e.target.value)}
+
+      />
+      <Button variant="contained" onClick={submitValue}>Submit</Button>
       
     </Box>
   );

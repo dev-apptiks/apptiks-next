@@ -100,8 +100,6 @@ function Login() {
                     }
                     helperText={formik.touched.email && formik.errors.email}
                 />
-                {/* <Button variant="contained" onClick={submitValue}>Submit</Button> */}
-
                 <Button
                     sx={{ height: 54, whiteSpace: 'nowrap', minWidth: 100 }}
                     variant="contained"
@@ -112,6 +110,9 @@ function Login() {
                 >
                     Send
                 </Button>
+                {/* <Button variant="contained" onClick={submitValue}>Submit</Button> */}
+
+                
 
             
 
