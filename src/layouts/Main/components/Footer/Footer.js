@@ -27,7 +27,7 @@ const Footer = () => {
             title="theFront"
             width={80}
           >
-            <Box
+            {/* <Box
               component={'img'}
               src={
                 mode === 'light'
@@ -36,7 +36,7 @@ const Footer = () => {
               }
               height={1}
               width={1}
-            />
+            /> */}
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
             <Box marginTop={1} marginRight={2}>
@@ -61,7 +61,7 @@ const Footer = () => {
                 Documentation
               </Link>
             </Box>
-            <Box marginTop={1}>
+            {/* <Box marginTop={1}>
               <Button
                 variant="outlined"
                 color="primary"
@@ -72,7 +72,7 @@ const Footer = () => {
               >
                 Purchase now
               </Button>
-            </Box>
+            </Box> */}
           </Box>
         </Box>
       </Grid>
@@ -83,7 +83,7 @@ const Footer = () => {
           color="text.secondary"
           gutterBottom
         >
-          &copy; theFront. 2021, Maccarian. All rights reserved
+          &copy; Apptiks. 2021, All rights reserved
         </Typography>
         <Typography
           align={'center'}

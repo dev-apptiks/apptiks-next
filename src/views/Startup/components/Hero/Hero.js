@@ -34,12 +34,7 @@ const Hero = () => {
   };
 
   const onSubmit = async(values) => {
-    alert("from Hero Submit")
-
-    console.log('from herooooooo', values)
-    
-    //after setting api, we should write below code
-    const response = await fetch('/api/contact',{
+    const response = await fetch('https://us-central1-apptiks-firebase-api.cloudfunctions.net/user/addContacts',{
       method:'POST',
       body: JSON.stringify(values),
       headers:{
@@ -49,10 +44,9 @@ const Hero = () => {
     })
     const data = await response.json()
     console.log("from comment submitvalue-----------",data)
-
-    return values;
+    resetForm({vallues:''});
+    //return values;
   };
-
   const formik = useFormik({
     initialValues,
     validationSchema: validationSchema,

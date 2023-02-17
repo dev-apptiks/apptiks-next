@@ -32,13 +32,13 @@ export default function Comment() {
       //  {data:{comment:'abc',feedback:'xyz'}};
         
        
-        const response = await fetch('/api/comment',{
+        const response = await fetch('https://us-central1-apptiks-firebase-api.cloudfunctions.net/user/addComment',{
            method: "POST",
            body: JSON.stringify(payload),
            headers:{
                'Content-type':'application/json'
            }
-       } )
+       });
        const data = await response.json()
        console.log("from comment submitvalue-----------",data)
 
